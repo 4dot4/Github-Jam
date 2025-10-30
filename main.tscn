@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://duc88u8hv2w2k"]
+
+[ext_resource type="MeshLibrary" uid="uid://bdr4csfdqci4n" path="res://models/Tiles.tres" id="1_ig7tw"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a202f"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_noarx"]
+sky_material = SubResource("ProceduralSkyMaterial_a202f")
+
+[sub_resource type="Environment" id="Environment_a0tk4"]
+background_mode = 2
+sky = SubResource("Sky_noarx")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_a0tk4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 6.1117287, 0)
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_ig7tw")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(65534, 65535, 11, 65535, 65535, 11, 0, 65535, 11, 1, 65535, 11, 2, 65535, 11, 3, 65535, 11, 3, 0, 11, 3, 1, 11, 2, 1, 11, 1, 1, 11, 0, 1, 11, 0, 0, 11, 65535, 0, 11, 1, 0, 11, 2, 0, 11, 65535, 1, 11, 65534, 0, 11, 65534, 1, 11, 65533, 0, 11, 65533, 65535, 11, 65533, 65534, 11, 65532, 65534, 11, 65533, 1, 11, 65534, 65533, 11, 1, 65534, 11, 0, 65533, 11, 0, 65534, 11, 65535, 65534, 11, 65534, 65534, 11, 65533, 2, 11, 65534, 2, 11, 65535, 2, 11, 0, 2, 11, 1, 2, 11, 2, 2, 11, 3, 2, 11, 65532, 2, 11, 65532, 1, 11, 65532, 0, 11, 65532, 65535, 11, 65532, 65533, 11, 65533, 65533, 11, 65535, 65533, 11, 1, 65533, 11, 2, 65533, 11, 2, 65534, 11, 3, 65534, 11, 3, 65533, 11, 4, 65533, 10, 4, 65534, 11, 4, 65535, 11, 4, 0, 11, 4, 1, 11, 65531, 65533, 1048586, 65531, 65534, 11, 65531, 65535, 11, 65531, 0, 11, 65531, 1, 11, 65531, 2, 655370, 4, 2, 1441802, 131067, 65533, 131086, 131067, 2, 1310734, 65540, 2, 524302, 65540, 65533, 1179662)
+}
+metadata/_editor_floor_ = Vector3(0, 1, 0)
