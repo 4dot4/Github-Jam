@@ -1,0 +1,103 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnoupgem8ih7v"]
+
+[ext_resource type="Script" uid="uid://bww6pbxvtipmf" path="res://label.gd" id="1_wtcfe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y32ns"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wtcfe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(1043.9172, 20)
+
+[node name="Node2D" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-50.0]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(218, 20)
+shape = SubResource("CircleShape2D_y32ns")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(280, 34)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_wtcfe")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(530, 106)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+shape = SubResource("CircleShape2D_wtcfe")
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+position = Vector2(599, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+shape = SubResource("CircleShape2D_wtcfe")
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="."]
+position = Vector2(280, 34)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4"]
+shape = SubResource("CircleShape2D_wtcfe")
+
+[node name="RigidBody2D5" type="RigidBody2D" parent="."]
+position = Vector2(425, 211)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D5"]
+shape = SubResource("CircleShape2D_wtcfe")
+
+[node name="RigidBody2D6" type="RigidBody2D" parent="."]
+position = Vector2(428, 44)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D6"]
+shape = SubResource("CircleShape2D_wtcfe")
+
+[node name="RigidBody2D7" type="RigidBody2D" parent="."]
+position = Vector2(908, 124)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D7"]
+shape = SubResource("CircleShape2D_wtcfe")
+
+[node name="RigidBody2D8" type="RigidBody2D" parent="."]
+position = Vector2(162, 79)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D8"]
+shape = SubResource("CircleShape2D_wtcfe")
+
+[node name="RigidBody2D9" type="RigidBody2D" parent="."]
+position = Vector2(652, 116)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D9"]
+shape = SubResource("CircleShape2D_wtcfe")
+
+[node name="RigidBody2D10" type="RigidBody2D" parent="."]
+position = Vector2(707, 47)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D10"]
+shape = SubResource("CircleShape2D_wtcfe")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(377.00003, 351)
+rotation = 0.7342838
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(762, 386)
+rotation = 2.520673
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -1.0
+offset_top = 618.0
+offset_right = 43.0
+offset_bottom = 641.0
+text = "Fps = "
+script = ExtResource("1_wtcfe")
